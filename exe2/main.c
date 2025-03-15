@@ -41,7 +41,7 @@ void led_2_task(void *p) {
 
   while (true) {
 
-    if (xSemaphoreTake(xSemaphore_r, pdMS_TO_TICKS(500)) == pdTRUE) {
+    if (xSemaphoreTake(xSemaphore_G, pdMS_TO_TICKS(500)) == pdTRUE) {
       gpio_put(LED_PIN_G, 1);
       vTaskDelay(pdMS_TO_TICKS(delay));
       gpio_put(LED_PIN_G, 0);
